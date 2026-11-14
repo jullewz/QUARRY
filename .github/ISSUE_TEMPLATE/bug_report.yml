@@ -1,0 +1,31 @@
+name: Bug report
+description: Quarry gives a wrong answer, raises an unexpected error, or loses data
+labels: [bug]
+body:
+  - type: textarea
+    id: sql
+    attributes:
+      label: Smallest SQL script that shows the problem
+      description: Include the CREATE TABLE and INSERT statements. A script that gives a different answer in SQLite is ideal.
+      render: sql
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected and what happened
+      description: Paste the full output, including any traceback.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Quarry version, Python version and operating system
+      placeholder: "quarry 0.1.0, Python 3.12.4, Windows 10"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [SQL results, Errors and messages, Storage or crash recovery, Performance, Shell, Python API]

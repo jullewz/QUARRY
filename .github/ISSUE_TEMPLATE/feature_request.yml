@@ -1,0 +1,15 @@
+name: Feature request
+description: Missing SQL syntax, a function, a pragma or a shell command
+labels: [enhancement]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What would you like Quarry to support?
+      description: Show the SQL or the command you want to run. Mention if SQLite supports it.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it matter to you?
